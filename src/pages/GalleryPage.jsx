@@ -41,7 +41,7 @@ import s1_img16 from '../assets/images/season1/230A2305.JPG';
 
 
 
-import ramp_img1 from "../assets/images/ramp/ramp1.jpg";
+import ramp_img1 from "../assets/images/ramp/ramp1.JPG";
 import ramp_img2 from "../assets/images/ramp/ramp2.jpg";
 import ramp_img3 from "../assets/images/ramp/ramp3.jpg";
 import ramp_img4 from "../assets/images/ramp/ramp4.jpg";
