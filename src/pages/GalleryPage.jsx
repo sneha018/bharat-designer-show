@@ -42,25 +42,25 @@ import s1_img16 from '../assets/images/season1/230A2305.JPG';
 
 
 import ramp_img1 from "../assets/images/ramp/ramp1.JPG";
-import ramp_img2 from "../assets/images/ramp/ramp2.jpg";
-import ramp_img3 from "../assets/images/ramp/ramp3.jpg";
-import ramp_img4 from "../assets/images/ramp/ramp4.jpg";
-import ramp_img5 from "../assets/images/ramp/ramp5.jpg";
-import ramp_img6 from "../assets/images/ramp/ram6.jpg";
-import ramp_img7 from "../assets/images/ramp/ramp7.jpg";
-import ramp_img8 from "../assets/images/ramp/ramp8.jpg";
-import ramp_img9 from "../assets/images/ramp/ramp9.jpg";
-import ramp_img10 from "../assets/images/ramp/ramp10.jpg";
-import ramp_img11 from "../assets/images/ramp/ramp11.jpg";
-import ramp_img12 from "../assets/images/ramp/ramp12.jpg";
-import ramp_img13 from "../assets/images/ramp/ramp13.jpg";
-import ramp_img14 from "../assets/images/ramp/ramp14.jpg";
-import ramp_img15 from "../assets/images/ramp/ramp15.jpg";
-import ramp_img16 from "../assets/images/ramp/ramp16.jpg";
-import ramp_img17 from "../assets/images/ramp/ramp17.jpg";
-import ramp_img18 from "../assets/images/ramp/ramp18.jpg";
-import ramp_img19 from "../assets/images/ramp/ramp19.jpg";
-import ramp_img20 from "../assets/images/ramp/ramp20.jpg";
+import ramp_img2 from "../assets/images/ramp/ramp2.JPG";
+import ramp_img3 from "../assets/images/ramp/ramp3.JPG";
+import ramp_img4 from "../assets/images/ramp/ramp4.JPG";
+import ramp_img5 from "../assets/images/ramp/ramp5.JPG";
+import ramp_img6 from "../assets/images/ramp/ram6.JPG";
+import ramp_img7 from "../assets/images/ramp/ramp7.JPG";
+import ramp_img8 from "../assets/images/ramp/ramp8.JPG";
+import ramp_img9 from "../assets/images/ramp/ramp9.JPG";
+import ramp_img10 from "../assets/images/ramp/ramp10.JPG";
+import ramp_img11 from "../assets/images/ramp/ramp11.JPG";
+import ramp_img12 from "../assets/images/ramp/ramp12.JPG";
+import ramp_img13 from "../assets/images/ramp/ramp13.JPG";
+import ramp_img14 from "../assets/images/ramp/ramp14.JPG";
+import ramp_img15 from "../assets/images/ramp/ramp15.JPG";
+import ramp_img16 from "../assets/images/ramp/ramp16.JPG";
+import ramp_img17 from "../assets/images/ramp/ramp17.JPG";
+import ramp_img18 from "../assets/images/ramp/ramp18.JPG";
+import ramp_img19 from "../assets/images/ramp/ramp19.JPG";
+import ramp_img20 from "../assets/images/ramp/ramp20.JPG";
 
 
 
