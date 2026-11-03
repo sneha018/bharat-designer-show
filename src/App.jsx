@@ -29,6 +29,15 @@ import TermsPage from './pages/TermsPage.jsx';
 import Season1 from './pages/Season1.jsx';
 import Season2 from './pages/Season2.jsx';
 
+import ModelsPage from './pages/ModelsPage.jsx';
+import ShowDirectorsPage from './pages/ShowDirectorsPage.jsx';
+import HairMakeupPage from './pages/HairMakeupPage.jsx';
+import ModelManagerPage from './pages/ModelManagerPage.jsx';
+import BackstageManagersPage from './pages/BackstageManagersPage.jsx';
+// import LedVisualsPage from './pages/LedVisualsPage.jsx';
+import StylistsPage from './pages/StylistsPage.jsx';
+import RegistrationPage from './pages/RegistrationPage.jsx';
+
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -76,6 +85,16 @@ const App = () => {
     case '/terms': Component = TermsPage; break;
     case '/season1': Component = Season1; break; 
     case '/season2': Component = Season2; break;
+
+
+case '/models': Component = ModelsPage; break;
+    case '/show-directors': Component = ShowDirectorsPage; break;
+    case '/hair-and-makeup': Component = HairMakeupPage; break;
+    case '/model-manager': Component = ModelManagerPage; break;
+    case '/backstage-managers': Component = BackstageManagersPage; break;
+    // case '/led-visuals': Component = LedVisualsPage; break;
+    case '/stylists': Component = StylistsPage; break;
+    case '/registration': Component = RegistrationPage; break;
     
     
     default: Component = HomePage;

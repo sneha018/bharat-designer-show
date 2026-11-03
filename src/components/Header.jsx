@@ -14,16 +14,38 @@ const menuLinks = [
       { name: 'Season 3', href: '/season3' },
     ]
   },
+  {
+    name: 'Talent',
+    href: '#',
+    isDropdown: true,
+    subLinks: [
+      { name: 'Models', href: '/models' },
+      { name: 'Show Directors', href: '/show-directors' },
+      { name: 'Hair and Makeup', href: '/hair-and-makeup' },
+      { name: 'Model Manager', href: '/model-manager' },
+      { name: 'Backstage Managers', href: '/backstage-managers' },
+      { name: 'Stylists', href: '/stylists' },
+    ]
+  },
+  // പുതിയ രജിസ്ട്രേഷൻ മെനു ഇവിടെ നൽകിയിരിക്കുന്നു
   { name: 'Schedule', href: '/schedule' },
   { name: 'Designers', href: '/designers' },
   { name: 'Gallery', href: '/gallery' },
   { name: 'Sponsors', href: '/sponsors' },
+  { name: 'Registration', href: '/registration' }, 
   { name: 'Contact', href: '/contact' },
 ];
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSeasonOpen, setIsSeasonOpen] = useState(false);
+  const [isTalentOpen, setIsTalentOpen] = useState(false);
+
+  const closeAllMenus = () => {
+    setIsMenuOpen(false);
+    setIsSeasonOpen(false);
+    setIsTalentOpen(false);
+  };
 
   return (
     <>
@@ -54,10 +76,7 @@ function Header() {
         className={`fixed inset-0 bg-black/70 backdrop-blur-sm transition-all duration-300 ${
           isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
-        onClick={() => {
-          setIsMenuOpen(false);
-          setIsSeasonOpen(false);
-        }}
+        onClick={closeAllMenus}
       ></div>
 
       {/* SIDE MENU */}
@@ -70,10 +89,7 @@ function Header() {
           {/* CLOSE BUTTON */}
           <div className="flex justify-end p-5">
             <button 
-              onClick={() => {
-                setIsMenuOpen(false);
-                setIsSeasonOpen(false);
-              }} 
+              onClick={closeAllMenus} 
               className="text-lg text-white/70 hover:text-[#D4AF37] transition"
               aria-label="Close Menu"
             >
@@ -85,23 +101,28 @@ function Header() {
           <div className="flex flex-col gap-3.5 px-6 overflow-y-auto max-h-[calc(100vh-160px)]">
             {menuLinks.map((link) => {
               if (link.isDropdown) {
+                const isOpen = link.name === 'Season' ? isSeasonOpen : isTalentOpen;
+                const toggleOpen = link.name === 'Season' 
+                  ? () => setIsSeasonOpen(!isSeasonOpen) 
+                  : () => setIsTalentOpen(!isTalentOpen);
+
                 return (
                   <div key={link.name} className="border-b border-white/10 pb-3">
-                    {/* SEASON DROPDOWN TRIGGER BUTTON */}
+                    {/* DROPDOWN TRIGGER BUTTON */}
                     <button
-                      onClick={() => setIsSeasonOpen(!isSeasonOpen)}
+                      onClick={toggleOpen}
                       className="w-full flex justify-between items-center text-sm uppercase tracking-[0.2em] text-white/90 hover:text-[#D4AF37] font-medium transition text-left"
                     >
                       <span>{link.name}</span>
-                      <span className={`text-xs transition-transform duration-300 ${isSeasonOpen ? 'rotate-180 text-[#D4AF37]' : ''}`}>
+                      <span className={`text-xs transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#D4AF37]' : ''}`}>
                         ▼
                       </span>
                     </button>
 
-                    {/* SEASON SUB-LINKS DROPDOWN */}
+                    {/* SUB-LINKS DROPDOWN */}
                     <div 
                       className={`flex flex-col gap-2 pl-3 transition-all duration-300 overflow-hidden ${
-                        isSeasonOpen ? 'max-h-40 pt-3 opacity-100' : 'max-h-0 pt-0 opacity-0'
+                        isOpen ? 'max-h-60 pt-3 opacity-100' : 'max-h-0 pt-0 opacity-0'
                       }`}
                     >
                       {link.subLinks.length > 0 && link.subLinks.map((sub) => (
@@ -109,10 +130,7 @@ function Header() {
                           key={sub.name}
                           href={sub.href}
                           className="text-xs uppercase tracking-widest text-white/70 hover:text-[#D4AF37] py-1 transition"
-                          onClick={() => {
-                            setIsMenuOpen(false);
-                            setIsSeasonOpen(false);
-                          }}
+                          onClick={closeAllMenus}
                         >
                           ✦ {sub.name}
                         </a>
@@ -127,10 +145,7 @@ function Header() {
                   key={link.name}
                   href={link.href}
                   className="text-sm uppercase tracking-[0.2em] border-b border-white/10 pb-3 text-white/90 hover:text-[#D4AF37] font-medium transition"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    setIsSeasonOpen(false);
-                  }}
+                  onClick={closeAllMenus}
                 >
                   {link.name}
                 </a>
