@@ -182,12 +182,12 @@ function HomePage() {
     {/* ══════ TEXT ══════ */}
     <div className="text-center md:text-left flex-1 max-w-2xl">
 
-      <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+      {/* <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
         <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-[ping_2s_ease-in-out_infinite]" />
         <p className="text-sm md:text-base text-[#D4AF37] uppercase tracking-[0.3em] font-semibold">
           Official Organiser &amp; Production Partner
         </p>
-      </div>
+      </div> */}
 
       <h3 className="text-4xl font-black uppercase leading-[0.92] tracking-tighter md:text-6xl">
         <span className="shimmer-gold">Dreamz</span>
